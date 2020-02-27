@@ -31,7 +31,7 @@ class MainActivity : BaseActivity(),
         recycler_view.addOnItemTouchListener(RecyclerItemClickListener(this,recycler_view,this))
         recycler_view.adapter = flickrRecyclerViewAdapter
 
-        val url = createUri("https://api.flickr.com/services/feeds/photos_public.gne", "linux, mint, backgrounds", "en-us", true)
+        val url = createUri("https://api.flickr.com/services/feeds/photos_public.gne", "space, hubble", "en-us", true)
         val getRawData = GetRawData(this)
         getRawData.execute(url)
 
