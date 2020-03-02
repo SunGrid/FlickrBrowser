@@ -3,7 +3,7 @@ package com.vivospice.flickrbrowser
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.preference.PreferenceManager
+import androidx.preference.PreferenceManager
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
@@ -118,13 +118,13 @@ class MainActivity : BaseActivity(),
         val sharedPref = PreferenceManager.getDefaultSharedPreferences(applicationContext)
         val queryResult = sharedPref.getString(FLICKR_QUERY, "")
 
-        if (queryResult != null) {
-            if (queryResult.isNotEmpty()) {
+        //if (queryResult != null) {
+            if (queryResult?.isNotEmpty() == true) {
                 val url = createUri("https://api.flickr.com/services/feeds/photos_public.gne", queryResult, "en-us", true)
                 val getRawData = GetRawData(this)
                 getRawData.execute(url)
             }
-        }
+       // }
         Log.d(TAG, ".onResume: ends")
     }
 }

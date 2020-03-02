@@ -3,7 +3,8 @@ package com.vivospice.flickrbrowser
 import android.app.SearchManager
 import android.content.Context
 import android.os.Bundle
-import android.preference.PreferenceManager
+//import android.preference.PreferenceManager
+import androidx.preference.PreferenceManager
 import android.util.Log
 import android.view.Menu
 import android.widget.SearchView  //https://developer.android.com/reference/androidx/appcompat/widget/SearchView
