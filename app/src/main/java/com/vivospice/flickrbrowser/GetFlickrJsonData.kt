@@ -24,6 +24,7 @@ class GetFlickrJsonData(private val listener: OnDataAvailable) : AsyncTask<Strin
 
             for (i in 0 until itemsArray.length()){
                 val jsonPhoto = itemsArray.getJSONObject(i)
+
                 val title = jsonPhoto.getString("title")
                 val author = jsonPhoto.getString("author")
                 val authorId = jsonPhoto.getString("author_id")
